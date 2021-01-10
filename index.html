@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="./vue.js"></script>
+  <link rel="stylesheet" href="style.css">
+  <title>Tiny CEP</title>
+</head>
+
+<!-- https://viacep.com.br/ws/01001000/json/ -->
+
+<body>
+
+  <h1>Tiny CEP</h1>
+  <div id="app">
+
+    <div class="search">
+      <input type="text" maxlength="8" v-model="cepNumber" placeholder="01001000">
+      <button @click="resetData">Reset</button>
+    </div>
+
+
+    <ul :class="{transition: isActive}">
+      <li v-for="(value, key) in dadosCep"><span>{{key}}</span> <span>{{value}}</span> </li>
+    </ul>
+
+  </div>
+
+  <script>
+    const vm = new Vue({
+      el: "#app",
+
+      data: {
+        cepNumber: "",
+        dadosCep: "",
+        isActive: false
+      },
+
+      methods: {
+        resetData() {
+          this.dadosCep = ""
+          this.cepNumber = ""
+          this.isActive = false
+        }
+      },
+
+      watch: {
+        cepNumber(value) {
+          if (value.length === 8) {
+
+            setTimeout
+
+            fetch(`https://viacep.com.br/ws/${value}/json/`)
+              .then(r => r.json())
+              .then(r => {
+                this.dadosCep = r
+              })
+
+            this.isActive = !this.isActive
+          }
+        }
+      }
+    })
+  </script>
+</body>
+
+
+
+</html>
