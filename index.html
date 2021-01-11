@@ -35,7 +35,7 @@
       data: {
         cepNumber: "",
         dadosCep: "",
-        isActive: false
+        isActive: false,
       },
 
       methods: {
@@ -44,21 +44,28 @@
           this.cepNumber = ""
           this.isActive = false
         }
+
+
       },
 
       watch: {
         cepNumber(value) {
+
+
+
           if (value.length === 8) {
+            this.isActive = true
+            setTimeout(() => {
+              fetch(`https://viacep.com.br/ws/${value}/json/`)
+                .then(r => r.json())
+                .then(r => {
+                  this.dadosCep = r
+                })
+            }, 300);
 
-            setTimeout
+            /* 
 
-            fetch(`https://viacep.com.br/ws/${value}/json/`)
-              .then(r => r.json())
-              .then(r => {
-                this.dadosCep = r
-              })
-
-            this.isActive = !this.isActive
+             */
           }
         }
       }

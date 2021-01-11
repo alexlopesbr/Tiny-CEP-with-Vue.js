@@ -113,8 +113,9 @@ h1 {
 }
 
 ul {
-  transition: 100ms;
+  transition: 300ms;
   height: 0;
+  width: 450px;
 }
 
 .transition {

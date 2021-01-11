@@ -15,7 +15,7 @@
 <h2 align="center">Preview 💻📱</h2>
 
    <p align="center">
-      <img src="tiny-cep.gif" width="75%" alt="Happy Demo"/>
+      <img src="tiny-cep.gif" width="100%" alt="Tiny CEP app"/>
    </p>
 
 ---
@@ -74,6 +74,8 @@ $ git push origin my-feature
 
 > This project was developed with ❤️ by **[@Alexandre Lopes](https://www.linkedin.com/in/aleflopes/) <br>
 > If it helped you, give it ⭐, it will help me too 😉 The README design was kindly made available by **[@Felipe Sales](https://github.com/felipecastrosales)\*\*
+
+> Video recorder by [Alyssa X](https://alyssax.com/)
 
 ---
 
