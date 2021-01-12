@@ -94,9 +94,11 @@ h1 {
 #app {
   display: grid;
   grid-gap: 30px;
+  align-items: center;
 
   max-width: 100%;
 
+  margin: 30px;
   padding: 30px;
   border-radius: 10px;
 
@@ -113,9 +115,10 @@ h1 {
 }
 
 ul {
+  align-content: center;
   transition: 300ms;
   height: 0;
-  width: 450px;
+  max-width: 450px;
 }
 
 .transition {
@@ -135,4 +138,23 @@ li + li {
 
 span + span {
   text-align: right;
+}
+
+@media (max-width: 540px) {
+  li {
+    grid-template-columns: 1fr;
+  }
+  .transition {
+    height: 720px;
+  }
+}
+
+span + span,
+span {
+  text-align: center;
+  grid-gap: 20px;
+}
+
+span {
+  margin-bottom: 10px;
 }

@@ -44,15 +44,10 @@
           this.cepNumber = ""
           this.isActive = false
         }
-
-
       },
 
       watch: {
         cepNumber(value) {
-
-
-
           if (value.length === 8) {
             this.isActive = true
             setTimeout(() => {
@@ -62,10 +57,6 @@
                   this.dadosCep = r
                 })
             }, 300);
-
-            /* 
-
-             */
           }
         }
       }
