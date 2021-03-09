@@ -7,8 +7,6 @@
    </p>
 
 - ✅ "building the application"
-- 🔄 "responsiveness"
-- 🔄 "complete application"
 
 ---
 
